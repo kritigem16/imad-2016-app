@@ -21,7 +21,8 @@ body {
 }
     .c{
     margin:0 auto;
-    color:pink;
+    color:purple;
     font-family:sans-serif;
     max-width:800px;
+    background:blue; 
     } 
