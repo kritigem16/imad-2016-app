@@ -5,6 +5,7 @@ var path = require('path');
 var app = express();
 app.use(morgan('combined'));
 
+
 var articleone={
     title:"Article one | Kriti Jain",
     heading:"article one",
@@ -28,7 +29,7 @@ function createtemp(data){
  var htmltemp=`<html>
     <head>
         <title>
-            $(title)
+            ${title}
         </title>
         <meta name="viewport" content="width-devicewidth, initial-scale=1"/>
   <link href="/ui/style.css" rel="stylesheet" />
@@ -40,12 +41,12 @@ function createtemp(data){
                 <a href='/'>Home</a>
             </div>
             <hr/>
-            <h3>$(heading)</h3>
+            <h3>${heading}</h3>
             <div>
-               $(date)
+               ${date}
             </div>
             <div>
-            $(content)
+            ${content}
             </div>
         </div>
     </body>
