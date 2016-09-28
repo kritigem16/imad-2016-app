@@ -19,4 +19,9 @@ body {
 .img-medium {
     height: 200px;
 }
-
+    .c{
+    margin:0 auto;
+    color:pink;
+    font-family:sans-serif;
+    max-width:800px;
+    } 
