@@ -5,8 +5,8 @@ var path = require('path');
 var app = express();
 app.use(morgan('combined'));
 
-
-var articleone={
+var article={
+ 'article-one':{
     title:"Article one | Kriti Jain",
     heading:"article one",
     date:"sep 28, 2016",
@@ -20,6 +20,35 @@ var articleone={
                     This is article one.This is article one.This is article one.This is article one.This is article one.This is article one.This is article one.This is article one.This is article one.This is article one.This is article one.This is article one.
                 </p> `
     
+},
+ 'artcile-two':{
+      title:"Article two | Kriti Jain",
+    heading:"article two",
+    date:"sep 5, 2016",
+    content:` <p>
+                    This is article two.This is article two.This is article two.This is article two.This is article two.This is article two.This is article two.This is article two.This is article two.This is article two.This is article two.This is article two.
+                </p>
+                <p>
+                    This is article two.This is article two.This is article two.This is article two.This is article two.This is article two.This is article two.This is article two.This is article two.This is article two.This is article two.This is article two.
+                </p>
+                <p>
+                    This is article two.This is article two.This is article two.This is article two.This is article two.This is article two.This is article two.This is article two.This is article two.This is article two.This is article two.This is article two.
+                </p> `
+    
+ },
+ 'article-three':{ title:"Article three | Kriti Jain",
+    heading:"article three",
+    date:"sep 21, 2016",
+    content:` <p>
+                    This is article three. 
+                </p>
+                <p>
+                    This is article three.
+                </p>
+                <p>
+                    This is article three. 
+                </p> `
+    }
 };
 function createtemp(data){   
  var title=data.title;
@@ -58,17 +87,12 @@ app.get('/', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'index.html'));
 });
 
-app.get('/article-one',function(req,res){
-   res.send(createtemp(articleone));
+app.get('/:articleName',function(req,res){
+   
+   var articleName=req.params.articleName;
+   res.send(createtemp(article[articleName]));
 });
 
-app.get('/article-two',function(req,res){
-   res.sendFile(path.join(__dirname, 'ui', 'article-two.html'));
-});
-
-app.get('/article-three',function(req,res){
-   res.sendFile(path.join(__dirname, 'ui', 'article-three.html'));
-});
 
 app.get('/ui/style.css', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'style.css'));
