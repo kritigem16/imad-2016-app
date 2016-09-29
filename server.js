@@ -21,7 +21,7 @@ var article={
                 </p> `
     
 },
- 'artcile-two':{
+ 'article-two':{
       title:"Article two | Kriti Jain",
     heading:"article two",
     date:"sep 5, 2016",
