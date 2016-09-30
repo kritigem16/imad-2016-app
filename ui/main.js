@@ -22,7 +22,7 @@ button.oncick= function(){
 
 
 var submit=document.getElementById('Submit');
-submit.onlcick=function(){
+submit.oncick=function(){
     
     var request = new XMLHttpRequest();
  request.onreadystatechange = function(){
