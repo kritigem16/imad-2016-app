@@ -6,9 +6,9 @@ button.oncick= function(){
 
  var request=new XMLHttprequest();
  request.onreadystatechange=function(){
-     if(request.readyState==XMLhttpRequest.Done)
+     if(request.readyState===XMLhttpRequest.Done)
      {
-     if(request.status==200)
+     if(request.status===200)
     { var counter=request.responsetext();
      var span=document.getElementById("count");
      span.innerHTML=counter.toString(); 
