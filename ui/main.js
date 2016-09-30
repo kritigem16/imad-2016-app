@@ -21,7 +21,7 @@ button.oncick= function(){
 };
 
 
-var submit=document.getElementById('Submit');
+var submit=document.getElementById('submit_btn');
 submit.oncick=function(){
     
     var request = new XMLHttpRequest();
@@ -44,6 +44,6 @@ ul.innerHTML= list;
  };
  var nameInput=document.getElementById('name');
  var name= nameInput.value;
-   request.open('GET','http://kritigem16.imad.hasura-app.io/submit-name/name'+name,true);
+   request.open('GET','http://kritigem16.imad.hasura-app.io/submit-name?name='+name,true);
    request.send(null);
 };
