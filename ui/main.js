@@ -9,7 +9,7 @@ button.oncick= function(){
      if(request.readyState===XMLhttpRequest.Done)
      {
      if(request.status===200)
-    { var counter=request.responsetext();
+    { var counter=request.responseText();
      var span=document.getElementById("count");
      span.innerHTML=counter.toString(); 
 }
