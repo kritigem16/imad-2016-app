@@ -1,12 +1,20 @@
 console.log('Loaded!');
-//make the image move on click
-var img=document.getElementById('madi');
-var marginLeft=0;
-function moveRight(){
-    marginLeft=marginLeft+5;
-    img.style.marginLeft=marginLeft + 'px';
-}
-img.onclick= function (){
-    var interval=setInterval(moveRight,50);
+//counter
+var button=document.getElementById("counter");
 
-};
+button.oncick= function(){
+
+ var request=new XMLHttprequest();
+ request.onreadystatechange=function(){
+     if(request.readyState==XMLhttpRequest.Done)
+     {
+     if(request.status==200)
+    { var counter=request.responsetext();
+     var span=document.getElementById("count");
+     span.innerHTML=counter.toString(); 
+}
+}
+ };
+   request.open('GET','http://kritigem16.imad.hasura-app.io/counter',true);
+   request.send(null);
+} ;
