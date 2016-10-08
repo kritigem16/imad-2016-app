@@ -5,7 +5,7 @@ var button = document.getElementById("counter");
 button.oncick= function(){
 
  var request = new XMLHttpRequest();
- request.onreadystatechange = function(){
+ request.onreadystatechange = function() {
      if(request.readyState===XMLHttpRequest.DONE)
      {
      if(request.status===200)
@@ -16,7 +16,7 @@ button.oncick= function(){
 }
 }
  };
-   request.open('GET','http://kritigem16.imad.hasura-app.io/counter',true);
+   request.open("GET","http://kritigem16.imad.hasura-app.io/counter",true);
    request.send(null);
 };
 
