@@ -98,6 +98,15 @@ app.get('/submit-name',function(req,res){
     names.push(name);
     res.send(JSON.stringify(names));
 });
+
+var comments = [];
+app.get('/submit-comment', function (req, res) { 
+    var comment = req.query.comment;
+    names.push(comment);
+    // JSON: JavaScript object notation
+    res.send(JSON.stringify(comments));//this will convert the array into a string
+});
+
 app.get('/:articleName',function(req,res){
    
    var articleName=req.params.articleName;
