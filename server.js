@@ -102,7 +102,7 @@ app.get('/submit-name',function(req,res){
 var comments = [];
 app.get('/submit-comment', function (req, res) { 
     var comment = req.query.comment;
-    names.push(comment);
+    comments.push(comment);
     // JSON: JavaScript object notation
     res.send(JSON.stringify(comments));//this will convert the array into a string
 });
