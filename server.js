@@ -137,8 +137,7 @@ var express = require('express');
              }
          });
      } else {
- -       res.status(404).send('You are not logged in');
- +       res.status(400).send('You are not logged in');
+        res.status(400).send('You are not logged in');
      }
   });
   
