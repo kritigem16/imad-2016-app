@@ -3,6 +3,8 @@ body {
     margin-top: 60px;
 }
 
+.vertical_line{height:150px; width:1px;background:#000;}
+
 .center {
     text-align: center;
 }
