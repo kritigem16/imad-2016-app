@@ -1,12 +1,6 @@
-html,body{
-  height:100%;
-}
-body{
-  text-align:center;
-  margin:100px;
-  background:#222 url(//images.weserv.nl/?url=i.imgur.com/NrIDycX.jpg) no-repeat;
-  background-size:cover;
-  overflow:hidden
+body {
+    font-family: sans-serif;
+    margin-top: 60px;
 }
 
 .center {
@@ -24,42 +18,29 @@ body{
 .img-medium {
     height: 200px;
 }
-    .c{
-    margin:0 auto;
-    color:purple;
-    font-family:sans-serif;
-    max-width:800px;
-    background:lightcyan; 
-    } 
-.fancy-btn{
-  display:inline-block;
-  position:relative;
-  padding:10px 20px;
-  border:2px solid #fda;
-  color:#fda;
-  font-family:'Dancing Script',serif;
-  font-style:italic;
-  font-size:30px;
-  text-decoration:none;
-  margin:20px auto;
-}
-.fancy-btn:after{
-  content:" ";
-  
-  display:inline-block;
-  width:100%;
-  height:100%;
-  position:absolute;
-  top:0;
-  left:0;
-  right:0;
-  bottom:0;
-  margin:auto;
-  transition:all 0.4s;
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    color: #4a4a4a;
+    font-family: sans-serif;
+    padding-left: 20px;
+    padding-right: 20px;
 }
 
-.fancy-btn:hover:after{  
-  border:2px solid #fda;
-  width: calc(100% - 10px);
-  height: calc(100% + 10px); 
+.comment {
+    margin-left: 10px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #ccc;
+}
+
+.commenter {
+    font-style: italic;
+    font-size: 0.8em;
+}
+
+#comment_form {
+    margin-left: 10px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #ccc;
 }
