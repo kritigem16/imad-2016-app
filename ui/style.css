@@ -43,7 +43,12 @@ body {
     border-bottom: 1px solid #ccc;
 }
 /* Layout */
-
+#main-content {
+	margin:0 auto;
+}
+#main-image {
+	text-align:center;
+}
 
 p {
 	margin:0;
