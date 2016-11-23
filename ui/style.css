@@ -1,7 +1,10 @@
 body {
     font-family: sans-serif;
     margin-top: 60px;
+    background-image:url(http://thecutestblogontheblock.com/wp-content/uploads/2011/11/pied-striper-free-modern-vintage-blogger-background-3c-copy-576x288.jpg);
+     background-repeat:repeat;
 }
+    
 
 .center {
     text-align: center;
