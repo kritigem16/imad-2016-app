@@ -1,3 +1,37 @@
+function vote(ev, el, how) {
+  var id = el.id.split(/_/)[1];
+  var up = $('up_' + id);
+  vis(up, how == 'un');
+  vis($('down_' + id), how == 'un');
+  var unv = '';
+  if (how != 'un') {
+    unv = " | <a id='un_" + id
+      + "' onclick='return vote(event, this,\"un\")' href='"
+      + up.href.replace('how=up','how=un')
+      + "'>" + (how == 'up' ? 'unvote' : 'undown') + "</a>"
+  }
+  $('unv_' + id).innerHTML = unv;
+  new Image().src = el.href;
+  ev.stopPropagation();
+  return false;
+}
+
+function comments () { return allof('comtr') }
+function collapsed () { return allof('coll') }
+
+function kids (id) {
+  var ks = [];
+  var trs = comments();
+  var i = pos($(id), trs);
+  if (i >= 0) {
+    ks = cut(trs, i + 1);
+    var n = ind($(id));
+    var j = pos(function(tr) {return ind(tr) <= n}, ks);
+    if (j >= 0) { ks = cut(ks, 0, j) }
+  }
+  return ks;
+}
+
 function toggle (ev, id) {
   var on = !find($(id), collapsed());
   (on ? addClass : remClass)($(id), 'coll');
