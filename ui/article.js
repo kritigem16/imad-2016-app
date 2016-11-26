@@ -4,7 +4,7 @@ function loadCommentForm () {
     var commentFormHtml = `
         <div class="row control-group">
             <div class="form-group col-xs-12 floating-label-form-group controls">
-              <label>Write your Comment</label>
+              <label>Start discussion here !</label>
         <textarea id="comment_text" rows="4" cols="80" class="form-control" placeholder="Enter your comment here..." required>
         </textarea>
         </div>
