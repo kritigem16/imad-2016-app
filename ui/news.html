@@ -2,6 +2,19 @@
 <head>
         <title>B-News</title>
         <link href="/ui/style.css" rel="stylesheet" />
+        <style>
+            @media only screen
+and (min-width : 300px)
+and (max-width : 750px) {
+  #hnmain { width: 100%; }
+  body { padding: 0; margin: 0; width: 100%; -webkit-text-size-adjust: none; }
+  td { height: inherit !important; }
+  .title, .comment { font-size: inherit;  }
+  span.pagetop { display: block; margin: 3px 5px; font-size: 12px; }
+  span.pagetop b { display: block; font-size: 15px; }
+  table.comment-tree .comment a { display: inline-block; max-width: 200px; overflow: hidden; white-space: nowrap;
+    text-overflow: ellipsis; vertical-align:top; }
+        </style>
     </head>
 <body>
      <header class="intro-header" style="background-image: url('ui/news.jpg')">
@@ -18,7 +31,7 @@
         </div>
     </header>
     <center><table id="hnmain" border="0" cellpadding="0" cellspacing="0" width="85%" bgcolor="#f6f6ef">
-        <tr><td bgcolor="#ff6600"><table border="0" cellpadding="0" cellspacing="0" width="100%" style="padding:2px"><tr><td style="width:18px;padding-right:4px"><a href="http://www.ycombinator.com"><img src="y18.gif" width="18" height="18" style="border:1px white solid;"></a></td>
+        <tr><td bgcolor="#ff6600"><table border="0" cellpadding="0" cellspacing="0" width="100%" style="padding:2px"><tr><td style="width:18px;padding-right:4px"></td>
                   <td style="line-height:12pt; height:10px;"><span class="pagetop">
       <tr><td><table border="0" cellpadding="0" cellspacing="0" class="itemlist">
               <tr class='athing' id='13041886'>
