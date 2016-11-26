@@ -1,4 +1,8 @@
-body  { font-family:Verdana, Geneva, sans-serif; font-size:10pt; color:#828282; }
+body {
+  font-family: 'Lora', 'Times New Roman', serif;
+  font-size: 20px;
+  color: #333333;
+}
 td    { font-family:Verdana, Geneva, sans-serif; font-size:10pt; color:#828282; }
 .intro-header .site-heading,
 .intro-header .post-heading,
