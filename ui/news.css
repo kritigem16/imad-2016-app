@@ -24,7 +24,6 @@ td    { font-family:Verdana, Geneva, sans-serif; font-size:10pt; color:#828282; 
 .subtext td { font-family:Verdana, Geneva, sans-serif; font-size:  7pt; color:#828282; }
 
 input    { font-family:monospace; font-size:10pt; color:#000000; }
-input[type=\"submit\"] { font-family:Verdana, Geneva, sans-serif;}
 textarea { font-family:monospace; font-size:10pt; color:#000000; }
 
 a:link    { color:#000000; text-decoration:none; }
@@ -74,7 +73,7 @@ pre:hover { overflow:auto }
 .votearrow {
   width:      10px;
   height:     10px;
-  border:     0px;
+
   margin:     3px 2px 6px;
   background: url("grayarrow.gif")
   no-repeat;
@@ -100,12 +99,12 @@ pre:hover { overflow:auto }
 and (min-width : 300px)
 and (max-width : 750px) {
   #hnmain { width: 100%; }
-  body { padding: 0; margin: 0; width: 100%; -webkit-text-size-adjust: none; }
-  td { height: inherit !important; }
+  body { padding: 0; margin: 0; width: 100%;  }
+  td { height: inherit ; }
   .title, .comment { font-size: inherit;  }
   span.pagetop { display: block; margin: 3px 5px; font-size: 12px; }
   span.pagetop b { display: block; font-size: 15px; }
-  table.comment-tree .comment a { display: inline-block; max-width: 200px; overflow: hidden; white-space: nowrap;
+  .comment-tree .comment a { display: inline-block; max-width: 200px; overflow: hidden; white-space: nowrap;
     text-overflow: ellipsis; vertical-align:top; }
   img[src='s.gif'][width='40'] { width: 12px; }
   img[src='s.gif'][width='80'] { width: 24px; }
