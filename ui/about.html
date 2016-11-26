@@ -3,15 +3,34 @@
     <head>
         <title>Pinkilliant</title>
         <link href="/ui/style.css" rel="stylesheet" />
+        <style> 
+div {
+    width: 100px;
+    height: 50px;
+    background-color: white;
+    font-weight: bold;
+    position: relative;
+    -webkit-animation: mymove 5s infinite; /* Safari 4.0 - 8.0 */
+    animation: mymove 5s infinite;
+}
+/* Standard syntax */
+#div1 {animation-timing-function: linear;}
+@keyframes mymove {
+    from {left: 0px;}
+    to {left: 300px;}
+}
+</style>
     </head>
     <body bgcolor="pink;">
     <div class="container" style="text-color:white;">
             <div class="center">
                 <img id='madi' src="https://scontent-sit4-1.xx.fbcdn.net/v/t1.0-9/6799_1052932104745159_4827384457283534182_n.jpg?oh=70f0541e3216f79aac5d5635a3a0a40a&oe=58C9BD98" class="img-medium"/>
             </div>
+            <div id="div1">
             <h3>About Me</h3>
+            </div>
             <div>
-                Hi. My name is Kriti Jain.<br/>
+                Hi. My name is Kriti Jain.I love to design and develop interactive websites and solve challenging programming problems and puzzles. <br/>
                </div>
             </div>
             </body>
