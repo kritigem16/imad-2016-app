@@ -4,6 +4,16 @@ body {
   color: #333333;
 }
 td    { font-family:Verdana, Geneva, sans-serif; font-size:10pt; color:#828282; }
+.intro-header {
+  background-color: #777777;
+  background: no-repeat center center;
+  background-attachment: scroll;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  background-size: cover;
+  -o-background-size: cover;
+  margin-bottom: 50px;
+}
 .intro-header .site-heading,
 .intro-header .post-heading,
 .intro-header .page-heading {
@@ -14,7 +24,7 @@ td    { font-family:Verdana, Geneva, sans-serif; font-size:10pt; color:#828282; 
 .subtext td { font-family:Verdana, Geneva, sans-serif; font-size:  7pt; color:#828282; }
 
 input    { font-family:monospace; font-size:10pt; color:#000000; }
-input[type=\"submit\"] { font-family:Verdana, Geneva, sans-serif; }
+input[type=\"submit\"] { font-family:Verdana, Geneva, sans-serif;}
 textarea { font-family:monospace; font-size:10pt; color:#000000; }
 
 a:link    { color:#000000; text-decoration:none; }
