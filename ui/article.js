@@ -1,9 +1,16 @@
+var currentArticleTitle = window.location.pathname.split('/')[1];
+
 function loadCommentForm () {
     var commentFormHtml = `
-        <h5>Submit a comment</h5>
-        <textarea id="comment_text" rows="5" cols="100" placeholder="Enter your comment here..."></textarea>
+        <div class="row control-group">
+            <div class="form-group col-xs-12 floating-label-form-group controls">
+              <label>Write your Comment</label>
+        <textarea id="comment_text" rows="4" cols="80" class="form-control" placeholder="Enter your comment here..." required>
+        </textarea>
+        </div>
+        </div>
         <br/>
-        <input type="submit" id="submit" value="Submit" />
+        <input type="submit" class="btn btn-default" id="submit" value="Submit" />
         <br/>
         `;
     document.getElementById('comment_form').innerHTML = commentFormHtml;
@@ -31,6 +38,10 @@ function loadCommentForm () {
         
         // Make the request
         var comment = document.getElementById('comment_text').value;
+        if (comment ==='') {
+        alert("Comments field can't be left empty");
+        return;
+    }
         request.open('POST', '/submit-comment/' + currentArticleTitle, true);
         request.setRequestHeader('Content-Type', 'application/json');
         request.send(JSON.stringify({comment: comment}));  
@@ -74,9 +85,9 @@ function loadComments () {
                 for (var i=0; i< commentsData.length; i++) {
                     var time = new Date(commentsData[i].timestamp);
                     content += `<div class="comment">
-                        <p>${escapeHTML(commentsData[i].comment)}</p>
+                        <p style="color:#550C73">${escapeHTML(commentsData[i].comment)}</p>
                         <div class="commenter">
-                            ${commentsData[i].username} - ${time.toLocaleTimeString()} on ${time.toLocaleDateString()} 
+                            <div style='color:#04d99d;font-weight:bold;font-variant: small-caps'>${escapeHTML(commentsData[i].username)}</div> - ${time.toLocaleTimeString()} on ${time.toLocaleDateString()}
                         </div>
                     </div>`;
                 }
