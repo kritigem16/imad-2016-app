@@ -4,6 +4,7 @@ function loadLoginForm () {
         <input type="text" id="username" placeholder="username" />
         <label>Username</label>
         <input type="password" id="password" />
+        <label>Password</label>
         <br/><br/>
         <input type="submit" id="login_btn" value="Login" />
         <input type="submit" id="register_btn" value="Register" />
