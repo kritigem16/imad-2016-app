@@ -68,7 +68,7 @@ h6 {
 }
 
 /*navigation horizontal*/
-ul {
+ul.topnav {
     list-style-type: none;
     margin: 0;
     padding: 0;
@@ -76,11 +76,9 @@ ul {
     background-color: #333;
 }
 
-li {
-    float: left;
-}
+ul.topnav li {float: left;}
 
-li a {
+ul.topnav li a {
     display: block;
     color: white;
     text-align: center;
@@ -88,7 +86,12 @@ li a {
     text-decoration: none;
 }
 
-/* Change the link color to #111 (black) on hover */
-li a:hover {
-    background-color: #111;
+ul.topnav li a:hover:not(.active) {background-color: #111;}
+.active {background-color: #4CAF50;}
+
+ul.topnav li.right {float: right;}
+
+@media screen and (max-width: 600px){
+    ul.topnav li.right, 
+    ul.topnav li {float: none;}
 }
