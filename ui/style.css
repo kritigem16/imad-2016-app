@@ -36,7 +36,7 @@ blockquote {
   color: #777777;
   font-style: italic;
 }
-hr.small {
+.small {
   max-width: 100px;
   margin: 15px auto;
   border-width: 4px;
