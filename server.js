@@ -71,45 +71,6 @@ app.get('/', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'index.html'));
 });
 
-app.get('/ui/bus.html', function (req, res) {
-  res.sendFile(path.join(__dirname, 'ui', 'bus.html'));
-});
-
-app.get('/ui/sports.html', function (req, res) {
-  res.sendFile(path.join(__dirname, 'ui', 'sports.html'));
-});
-
-app.get('/ui/profile.html', function (req, res) {
-  res.sendFile(path.join(__dirname, 'ui', 'profile.html'));
-});
-
-app.get('/ui/lcss.css', function (req, res) {
-res.sendFile(path.join(__dirname, 'ui', 'lcss.css'));
-});
-
-app.get('/ui/log.png', function (req, res) {
-res.sendFile(path.join(__dirname, 'ui', 'log.png'));
-});
-
-app.get('/ui/log.png', function (req, res) {
-res.sendFile(path.join(__dirname, 'ui', 'log.png'));
-});
-
-app.get('/ui/parlia.png', function (req, res) {
-res.sendFile(path.join(__dirname, 'ui', 'parlia.png'));
-});
-
-app.get('/ui/rg.png', function (req, res) {
-res.sendFile(path.join(__dirname, 'ui', 'rg.png'));
-});
-
-app.get('/ui/it.png', function (req, res) {
-res.sendFile(path.join(__dirname, 'ui', 'it.png'));
-});
-
-app.get('/ui/surabhi.jpg', function (req, res) {
-res.sendFile(path.join(__dirname, 'ui', 'surabhi.jpg'));
-});
 
 function hash (input, salt) {
     // How do we create a hash?
@@ -124,7 +85,9 @@ app.get('/hash/:input', function(req, res) {
 });
 
 app.post('/create-user', function (req, res) {
-   
+   // username, password
+   // {"username": "tanmai", "password": "password"}
+   // JSON
    var username = req.body.username;
    var password = req.body.password;
    var salt = crypto.randomBytes(128).toString('hex');
@@ -188,7 +151,7 @@ app.get('/check-login', function (req, res) {
 
 app.get('/logout', function (req, res) {
    delete req.session.auth;
-   res.send('<html><body style="background-color: #efebeb;color: #666;font-size: 87.5%;font-family:Arial;line-height: 1.5; text-align: center;"><a href="/">Back to home</a>You are successfully logged out!<br/><br/></body></html>');
+   res.send('<html><body>Logged out!<br/><br/><a href="/">Back to home</a></body></html>');
 });
 
 var pool = new Pool(config);
@@ -237,7 +200,7 @@ app.post('/submit-comment/:articleName', function (req, res) {
                             if (err) {
                                 res.status(500).send(err.toString());
                             } else {
-                                res.status(200).send('Comment inserted!');
+                                res.status(200).send('Comment inserted!')
                             }
                         });
                 }
