@@ -25,7 +25,7 @@ function loadCommentForm () {
         request.onreadystatechange = function () {
           if (request.readyState === XMLHttpRequest.DONE) {
                 // Take some action
-                if (request.status === 200) {
+                if (request.status === 400) {
                     // clear the form & reload all the comments
                     document.getElementById('comment_text').value = '';
                     loadComments();    
@@ -79,7 +79,7 @@ function loadComments () {
     request.onreadystatechange = function () {
         if (request.readyState === XMLHttpRequest.DONE) {
             var comments = document.getElementById('comments');
-            if (request.status === 200) {
+            if (request.status === 400) {
                 var content = '';
                 var commentsData = JSON.parse(this.responseText);
                 for (var i=0; i< commentsData.length; i++) {
