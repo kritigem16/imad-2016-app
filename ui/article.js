@@ -1,10 +1,10 @@
-var currentArticleTitle = window.location.pathname.split('/')[1];
+var currentArticleTitle = window.location.pathname.split('/')[2];
 
 function loadCommentForm () {
     var commentFormHtml = `
         <div class="row control-group">
             <div class="form-group col-xs-12 floating-label-form-group controls">
-              <label>Start discussion here !</label>
+              <label>Write your Comment</label>
         <textarea id="comment_text" rows="4" cols="80" class="form-control" placeholder="Enter your comment here..." required>
         </textarea>
         </div>
@@ -25,7 +25,7 @@ function loadCommentForm () {
         request.onreadystatechange = function () {
           if (request.readyState === XMLHttpRequest.DONE) {
                 // Take some action
-                if (request.status === 400) {
+                if (request.status === 200) {
                     // clear the form & reload all the comments
                     document.getElementById('comment_text').value = '';
                     loadComments();    
@@ -44,7 +44,7 @@ function loadCommentForm () {
     }
         request.open('POST', '/submit-comment/' + currentArticleTitle, true);
         request.setRequestHeader('Content-Type', 'application/json');
-        request.send(JSON.stringify({comment:comment}));  
+        request.send(JSON.stringify({comment: comment}));  
         submit.value = 'Submitting...';
         
     };
@@ -79,7 +79,7 @@ function loadComments () {
     request.onreadystatechange = function () {
         if (request.readyState === XMLHttpRequest.DONE) {
             var comments = document.getElementById('comments');
-            if (request.status === 400) {
+            if (request.status === 200) {
                 var content = '';
                 var commentsData = JSON.parse(this.responseText);
                 for (var i=0; i< commentsData.length; i++) {
