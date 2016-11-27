@@ -6,6 +6,7 @@ body {
 
 .center {
     text-align: center;
+    padding: 20px;
 }
 
 .text-big {
@@ -39,6 +40,7 @@ h6 {
 .intro-header .page-heading {
   padding: 100px 0 50px;
   color: white;
+  text-align:center;
 }
 .bold {
     font-weight: bold;
