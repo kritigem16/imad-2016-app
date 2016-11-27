@@ -139,8 +139,8 @@ footer {
   padding: 50px 0 65px;
 }
 footer .list-inline {
-  margin: 0;
-  padding: 0;
+  margin: 2px;
+  padding: 4px;
 }
 footer .copyright {
   font-size: 14px;
