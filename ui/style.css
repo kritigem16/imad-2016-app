@@ -111,6 +111,13 @@ p {
 p a {
   text-decoration: underline;
 }
+.floating-label-form-group {
+    font-size: 14px;
+    position: relative;
+    margin-bottom: 0;
+    padding-bottom: 0.5em;
+    border-bottom: 1px solid #eeeeee;
+}
 .contact_form{
     margin-left : 10px;
     border-bottom :2px solid #ccc;
