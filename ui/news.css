@@ -13,6 +13,7 @@ td    { font-family:Verdana, Geneva, sans-serif; font-size:10pt; color:#828282; 
   background-size: cover;
   -o-background-size: cover;
   margin-bottom: 50px;
+  text-align:center;
 }
 .intro-header .site-heading,
 .intro-header .post-heading,
