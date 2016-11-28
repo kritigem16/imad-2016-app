@@ -33,7 +33,7 @@ function vote(ev, el, how) {
     unv = " | <a id='un_" + id
       + "' onclick='return vote(event, this,\"un\")' href='"
       + up.href.replace('how=up','how=un')
-      + "'>" + (how == 'up' ? 'unvote' : 'undown') + "</a>"
+      + "'>" + (how == 'up' ? 'unvote' : 'undown') + "</a>";
   }
   $('unv_' + id).innerHTML = unv;
   new Image().src = el.href;
