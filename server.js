@@ -212,7 +212,7 @@ app.post('/submit-comment/:articleName', function (req, res) {
         res.status(403).send('Only logged in users can comment');
     }
 });
-var counter = 200;
+var counter = 250;
 app.get('/counter',function(req,res){
     counter = counter+1;
    res.send(counter.toString()); 
