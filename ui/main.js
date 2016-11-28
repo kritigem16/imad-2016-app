@@ -101,8 +101,7 @@ function loadLogin () {
             }
         }
     };
-          alert('Any message for success or failure');
-               console.log(this.responseText);
+      
     request.open('GET', '/check-login', true);
     request.send(null);
 }
