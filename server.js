@@ -95,7 +95,11 @@ app.get('/hash/:input', function(req, res) {
       var password = req.body.password;
       if(!username.trim() || !password.trim()){
            res.status(400).send('Username or password field blank.');   //Err if blank,tabs and space detected.
-       } else{
+       } else if(!/^[a-zA-Z0-9_#.]+$/.test(username))  //If username contains other than a-z,A-Z,0-9 then true.
+       {
+                 res.status(400).send('Your username contains special characters other than _#.');
+        }
+         else {
             var salt = crypto.randomBytes(128).toString('hex');
             var dbString = hash(password, salt);
             pool.query('INSERT INTO "user" (username, password) VALUES ($1, $2)', [username, dbString],                     function (err, result) {
