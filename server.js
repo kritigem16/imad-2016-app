@@ -89,7 +89,11 @@ app.get('/hash/:input', function(req, res) {
    var hashedString = hash(req.params.input, 'this-is-some-random-string');
    res.send(hashedString);
 });
-
+var counter = 296;
+app.get('/counter',function(req,res){
+    counter = counter+1;
+   res.send(counter.toString()); 
+});
  app.post('/create-user', function (req, res) {
       var username = req.body.username;
       var password = req.body.password;
@@ -223,11 +227,7 @@ app.post('/submit-comment/:articleName', function (req, res) {
         res.status(403).send('Only logged in users can comment');
     }
 });
-var counter = 296;
-app.get('/counter',function(req,res){
-    counter = counter+1;
-   res.send(counter.toString()); 
-});
+
 app.get('/articles/:articleName', function (req, res) {
   // SELECT * FROM article WHERE title = '\'; DELETE WHERE a = \'asdf'
   pool.query("SELECT * FROM article WHERE title = $1", [req.params.articleName], function (err, result) {
